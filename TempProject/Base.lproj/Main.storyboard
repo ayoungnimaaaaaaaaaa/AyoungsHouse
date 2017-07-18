@@ -9,11 +9,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--더보기-->
         <scene sceneID="2G8-F4-rmX">
             <objects>
                 <navigationController id="K57-3t-RH5" customClass="TMPNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="more" id="dKS-wS-beD"/>
+                    <tabBarItem key="tabBarItem" title="더보기" image="TabBarMore" id="dKS-wS-beD"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DbD-fP-1ic">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -23,11 +23,11 @@
             </objects>
             <point key="canvasLocation" x="-164" y="961"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--주변 보기-->
         <scene sceneID="mBP-b2-v3B">
             <objects>
                 <navigationController id="fIe-Nq-eBu" customClass="TMPNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="recents" id="enW-dO-vrC"/>
+                    <tabBarItem key="tabBarItem" title="주변 보기" image="TabBarMap" id="enW-dO-vrC"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1ky-Vs-9i7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -37,11 +37,11 @@
             </objects>
             <point key="canvasLocation" x="-164" y="199"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--내 정보-->
         <scene sceneID="FmB-hW-2Gi">
             <objects>
                 <navigationController id="ymh-Hk-vs1" customClass="TMPNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="history" id="5IR-1s-YzX"/>
+                    <tabBarItem key="tabBarItem" title="내 정보" image="TabBarMySpace" id="5IR-1s-YzX"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jA3-A3-DPd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -51,11 +51,11 @@
             </objects>
             <point key="canvasLocation" x="-994" y="962"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--피드-->
         <scene sceneID="Ds2-SX-JLr">
             <objects>
                 <navigationController id="3eM-Ws-ZGT" customClass="TMPNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="downloads" id="BiM-Uf-cQ4"/>
+                    <tabBarItem key="tabBarItem" title="피드" image="TabBarFeed" id="BiM-Uf-cQ4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tfZ-Bk-HLT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -65,11 +65,11 @@
             </objects>
             <point key="canvasLocation" x="-994" y="-613"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--홈-->
         <scene sceneID="sJN-A3-yWQ">
             <objects>
                 <navigationController id="gDQ-QK-iwx" customClass="TMPNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="search" id="T9S-Ph-847"/>
+                    <tabBarItem key="tabBarItem" title="홈" image="TabBarHome" id="T9S-Ph-847"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="08h-zw-mIU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -101,4 +101,11 @@
             <point key="canvasLocation" x="-993" y="200"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="TabBarFeed" width="16" height="16"/>
+        <image name="TabBarHome" width="16" height="16"/>
+        <image name="TabBarMap" width="16" height="16"/>
+        <image name="TabBarMore" width="16" height="16"/>
+        <image name="TabBarMySpace" width="16" height="16"/>
+    </resources>
 </document>
