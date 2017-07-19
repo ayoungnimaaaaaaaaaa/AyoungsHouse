@@ -8,7 +8,9 @@
 
 #import "TMPMapViewController.h"
 
-@interface TMPMapViewController ()
+static NSString *reviewCellIdentifier = @"map.reviewCell";
+
+@interface TMPMapViewController () < UICollectionViewDelegate, UICollectionViewDataSource >
 
 @end
 
@@ -22,6 +24,24 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+
+#pragma mark - UICollectionViewDataSource
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reviewCellIdentifier forIndexPath:indexPath];
+    
+    [cell setBackgroundColor:[UIColor grayColor]];
+    
+    return cell;
+}
+
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return 10;
 }
 
 @end
