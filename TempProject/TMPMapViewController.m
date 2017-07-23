@@ -8,7 +8,7 @@
 
 #import "TMPMapViewController.h"
 
-static NSString *reviewCellIdentifier = @"map.reviewCell";
+static NSString *reviewCellIdentifier = @"Map.ReviewCell";
 
 @interface TMPMapViewController () < UICollectionViewDelegate, UICollectionViewDataSource >
 

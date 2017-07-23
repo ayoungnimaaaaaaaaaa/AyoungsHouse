@@ -8,7 +8,7 @@
 
 #import "TMPHomeViewController.h"
 
-static NSString *realTimeCellIdentifier = @"home.realTimeCell";
+static NSString *realTimeCellIdentifier = @"Home.RealTimeCell";
 
 @interface TMPHomeViewController () < UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource >
 

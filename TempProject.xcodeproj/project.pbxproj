@@ -21,6 +21,8 @@
 		8D394EF81F1F8CB900053E77 /* TMPFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D394EF71F1F8CB900053E77 /* TMPFeedViewController.m */; };
 		8D394EFB1F1F8CDA00053E77 /* TMPMySpaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D394EFA1F1F8CDA00053E77 /* TMPMySpaceViewController.m */; };
 		8D394EFE1F1F8D5C00053E77 /* TMPMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D394EFD1F1F8D5C00053E77 /* TMPMoreViewController.m */; };
+		8D394F031F20E88100053E77 /* TMPFeedImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D394F011F20E88100053E77 /* TMPFeedImageTableViewCell.m */; };
+		8D394F041F20E88100053E77 /* TMPFeedImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D394F021F20E88100053E77 /* TMPFeedImageTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,9 @@
 		8D394EFA1F1F8CDA00053E77 /* TMPMySpaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMPMySpaceViewController.m; sourceTree = "<group>"; };
 		8D394EFC1F1F8D5C00053E77 /* TMPMoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMPMoreViewController.h; sourceTree = "<group>"; };
 		8D394EFD1F1F8D5C00053E77 /* TMPMoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMPMoreViewController.m; sourceTree = "<group>"; };
+		8D394F001F20E88100053E77 /* TMPFeedImageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMPFeedImageTableViewCell.h; sourceTree = "<group>"; };
+		8D394F011F20E88100053E77 /* TMPFeedImageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMPFeedImageTableViewCell.m; sourceTree = "<group>"; };
+		8D394F021F20E88100053E77 /* TMPFeedImageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TMPFeedImageTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +199,7 @@
 		8D394EF01F1F8C6200053E77 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				8D394EFF1F20E86700053E77 /* View */,
 				8D394EF61F1F8CB900053E77 /* TMPFeedViewController.h */,
 				8D394EF71F1F8CB900053E77 /* TMPFeedViewController.m */,
 			);
@@ -216,6 +222,16 @@
 				8D394EFD1F1F8D5C00053E77 /* TMPMoreViewController.m */,
 			);
 			name = More;
+			sourceTree = "<group>";
+		};
+		8D394EFF1F20E86700053E77 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8D394F001F20E88100053E77 /* TMPFeedImageTableViewCell.h */,
+				8D394F011F20E88100053E77 /* TMPFeedImageTableViewCell.m */,
+				8D394F021F20E88100053E77 /* TMPFeedImageTableViewCell.xib */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,6 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D394EC11F1E41BC00053E77 /* LaunchScreen.storyboard in Resources */,
+				8D394F041F20E88100053E77 /* TMPFeedImageTableViewCell.xib in Resources */,
 				8D394EBE1F1E41BC00053E77 /* Assets.xcassets in Resources */,
 				8D394EBC1F1E41BC00053E77 /* Main.storyboard in Resources */,
 			);
@@ -355,6 +372,7 @@
 				8D394EFE1F1F8D5C00053E77 /* TMPMoreViewController.m in Sources */,
 				8D394EB61F1E41BC00053E77 /* AppDelegate.m in Sources */,
 				8D394EB31F1E41BC00053E77 /* main.m in Sources */,
+				8D394F031F20E88100053E77 /* TMPFeedImageTableViewCell.m in Sources */,
 				8D394EEA1F1E435600053E77 /* TMPViewController.m in Sources */,
 				8D394EF81F1F8CB900053E77 /* TMPFeedViewController.m in Sources */,
 				8D394EF51F1F8C9800053E77 /* TMPMapViewController.m in Sources */,

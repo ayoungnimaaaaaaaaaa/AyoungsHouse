@@ -98,7 +98,7 @@
                                     <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="map.reviewCell" id="4k3-CN-rZy">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Map.ReviewCell" id="4k3-CN-rZy">
                                         <rect key="frame" x="10" y="10" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -199,9 +199,28 @@
                     <view key="view" contentMode="scaleToFill" id="909-QL-pKU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t6O-je-J3w">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="MrH-7i-AM2" id="G07-Rb-j54"/>
+                                    <outlet property="delegate" destination="MrH-7i-AM2" id="Bvl-6j-wuk"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="t6O-je-J3w" firstAttribute="top" secondItem="NEi-pG-P5I" secondAttribute="bottom" id="0e5-JA-WvU"/>
+                            <constraint firstItem="Oyh-1H-0em" firstAttribute="top" secondItem="t6O-je-J3w" secondAttribute="bottom" id="Rvf-SC-k26"/>
+                            <constraint firstAttribute="trailing" secondItem="t6O-je-J3w" secondAttribute="trailing" id="lzW-QI-nvK"/>
+                            <constraint firstItem="t6O-je-J3w" firstAttribute="leading" secondItem="909-QL-pKU" secondAttribute="leading" id="o3r-yt-Y8o"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fvp-rq-iR9"/>
+                    <connections>
+                        <outlet property="tableView" destination="t6O-je-J3w" id="Cuj-9D-dOU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ckn-S3-63Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -253,7 +272,7 @@
                                 <rect key="frame" x="31" y="269" width="313" height="334"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="home.realTimeCell" id="GuG-MI-mzn">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Home.RealTimeCell" id="GuG-MI-mzn">
                                         <rect key="frame" x="0.0" y="28" width="313" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GuG-MI-mzn" id="yEC-Iz-9qc">
