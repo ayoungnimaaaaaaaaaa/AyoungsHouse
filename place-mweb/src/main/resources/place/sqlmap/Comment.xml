@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="comment">
+  
+  <select id="selectAll" resultType="commentVO">
+  	SELECT * FROM COMMENT
+  </select>
+  
+  <insert id="insertOne" parameterType="commentVO">
+  	INSERT INTO COMMENT 
+  	VALUES (comment_no_seq.nextval,#{place_no},#{user_no},#{content})
+  </insert>
+  
+  <delete id="deleteOne" parameterType="int">
+  	DELETE FROM COMMENT 
+  	WHERE COMMENT_NO = #{comment_no}
+  </delete>
+  
+  <update id="updateOne" parameterType="commentVO">
+  	UPDATE COMMENT
+  	SET CONTENT = #{content}
+  	WHERE COMMENT_NO=#{comment_no}
+  </update>
+		  
+  
+  </mapper>

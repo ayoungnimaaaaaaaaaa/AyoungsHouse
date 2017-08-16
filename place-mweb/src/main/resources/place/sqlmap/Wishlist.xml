@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="wishlist">
+  
+  <select id="selectAll" resultType="wishlistVO">
+  	SELECT * FROM WISHLIST
+  </select>
+  
+  <select id="selectByUser" parameterType="int" resultType="wishlistVO">
+  	SELECT * FROM WISHLIST
+  	WHERE USER_NO=#{user_no}
+  </select>
+  
+  <select id="selectByPlace" parameterType="int" resultType="wishlistVO">
+  	SELECT * FROM WISHLIST
+  	WHERE PLACE_NO=#{place_no}
+  </select>
+  
+  <insert id="insertOne" parameterType="wishlistVO">
+  	INSERT INTO WISHLIST 
+  	VALUES (badlist_no_seq.nextval,#{user_no},#{place_no})
+  </insert>
+  
+  
+  </mapper>
