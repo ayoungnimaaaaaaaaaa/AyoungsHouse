@@ -49,4 +49,12 @@ static NSString *realTimeCellIdentifier = @"Home.RealTimeCell";
     return 10;
 }
 
+
+#pragma mark - UIScrollViewDelegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    [self.searchBar resignFirstResponder];
+}
+
 @end
