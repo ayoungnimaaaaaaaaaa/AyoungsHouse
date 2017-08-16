@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="review">
+  
+  <select id="selectAll" resultType="reviewVO">
+  	SELECT * FROM REVIEW
+  </select>
+  
+  <insert id="insertOne" parameterType="reviewVO">
+  	INSERT INTO REVIEW 
+  	VALUES (review_no_seq.nextval,
+  	#{user_no},
+  	#{place_no},
+  	#{title},
+  	#{review_date},
+  	#{content},
+  	#{open})
+  </insert>
+  
+  <delete id="deleteOne" parameterType="int">
+  	DELETE FROM REVIEW 
+  	WHERE REVIEW_NO = #{review_no}
+  </delete>
+  
+  <update id="updateOne" parameterType="reviewVO">
+  	UPDATE REVIEW
+  	SET TITEL = #{title},
+  	REVIEW_DATE = #{review_date},
+  	CONTENT = #{content},
+  	OPEN = #{open}
+  	WHERE REVIEW_NO=#{review_no}
+  </update>
+		  
+  
+  </mapper>

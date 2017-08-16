@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="user">
+  
+  <select id="selectAll" resultType="userVO">
+  	SELECT * FROM USER
+  </select>
+  
+  <insert id="insertOne" parameterType="userVO">
+  	INSERT INTO USER 
+  	VALUES (user_no_seq.nextval,#{id},#{pw},#{name},#{phone})
+  </insert>
+  
+  <delete id="deleteOne" parameterType="String">
+  	DELETE FROM USER 
+  	WHERE ID = #{id}
+  </delete>
+  
+  <update id="updateOne" parameterType="userVO">
+  	UPDATE USER
+  	SET PW =#{pw}, NAME=#{name}, PHONE=#{phone}
+  	WHERE ID=#{id}
+  </update>
+		  
+  
+  </mapper>
