@@ -24,12 +24,20 @@ static NSString *realTimeCellIdentifier = @"Home.RealTimeCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self registerForKeyboardNotifications];
+    
     [self.navigationItem setTitle:@"홈"];
     [self.navigationController.navigationBar setTintColor:[UIColor greenColor]];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+
+- (void)dealloc
+{
+    [self unregisterForKeyboardNotifications];
 }
 
 
@@ -56,5 +64,44 @@ static NSString *realTimeCellIdentifier = @"Home.RealTimeCell";
 {
     [self.searchBar resignFirstResponder];
 }
+
+
+#pragma mark - Keyboard
+
+- (void)registerForKeyboardNotifications
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasShown:) name:UIKeyboardDidShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillBeHidden:) name:UIKeyboardWillHideNotification object:nil];
+}
+
+
+- (void)unregisterForKeyboardNotifications
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:UIKeyboardDidShowNotification];
+    [[NSNotificationCenter defaultCenter] removeObserver:UIKeyboardWillHideNotification];
+}
+
+
+- (void)keyboardWasShown:(NSNotification *)notification
+{
+    NSDictionary *userInfo = notification.userInfo;
+    CGSize keyboardFrame = [[userInfo objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    
+    CGRect viewFrame = self.view.frame;
+    viewFrame.size.height -= keyboardFrame.height;
+    [self.view setFrame:viewFrame];
+}
+
+
+- (void)keyboardWillBeHidden:(NSNotification *)notification
+{
+    NSDictionary *userInfo = notification.userInfo;
+    CGSize keyboardFrame = [[userInfo objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    
+    CGRect viewFrame = self.view.frame;
+    viewFrame.size.height += keyboardFrame.height;
+    [self.view setFrame:viewFrame];
+}
+
 
 @end
