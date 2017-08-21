@@ -14,6 +14,7 @@
 		8D0C03BA1F45DA6D00C34E27 /* FindingNemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0C03B91F45DA6D00C34E27 /* FindingNemoTests.swift */; };
 		8D0C03C51F45DA6D00C34E27 /* FindingNemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0C03C41F45DA6D00C34E27 /* FindingNemoUITests.swift */; };
 		8D0C03D51F4B1B1500C34E27 /* FNMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0C03D41F4B1B1500C34E27 /* FNMViewController.swift */; };
+		8D0C03D71F4B1B5800C34E27 /* FNMNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0C03D61F4B1B5800C34E27 /* FNMNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		8D0C03C41F45DA6D00C34E27 /* FindingNemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindingNemoUITests.swift; sourceTree = "<group>"; };
 		8D0C03C61F45DA6D00C34E27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D0C03D41F4B1B1500C34E27 /* FNMViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FNMViewController.swift; sourceTree = "<group>"; };
+		8D0C03D61F4B1B5800C34E27 /* FNMNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FNMNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				8D0C03D41F4B1B1500C34E27 /* FNMViewController.swift */,
+				8D0C03D61F4B1B5800C34E27 /* FNMNavigationController.swift */,
 			);
 			name = Foundation;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 			files = (
 				8D0C03D51F4B1B1500C34E27 /* FNMViewController.swift in Sources */,
 				8D0C03A51F45DA6D00C34E27 /* AppDelegate.swift in Sources */,
+				8D0C03D71F4B1B5800C34E27 /* FNMNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
