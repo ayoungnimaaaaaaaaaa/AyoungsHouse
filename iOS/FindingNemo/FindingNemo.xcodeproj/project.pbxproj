@@ -17,6 +17,8 @@
 		8D0C03D71F4B1B5800C34E27 /* FNMNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0C03D61F4B1B5800C34E27 /* FNMNavigationController.swift */; };
 		8D0C03DA1F4B1BAC00C34E27 /* FNMHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0C03D91F4B1BAC00C34E27 /* FNMHomeViewController.swift */; };
 		8D0C03DC1F4B1EB600C34E27 /* FNMSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0C03DB1F4B1EB600C34E27 /* FNMSearchBar.swift */; };
+		8D0C03DF1F4B266000C34E27 /* FNMRealTimeRankTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0C03DD1F4B266000C34E27 /* FNMRealTimeRankTableViewCell.swift */; };
+		8D0C03E01F4B266000C34E27 /* FNMRealTimeRankTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D0C03DE1F4B266000C34E27 /* FNMRealTimeRankTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		8D0C03D61F4B1B5800C34E27 /* FNMNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FNMNavigationController.swift; sourceTree = "<group>"; };
 		8D0C03D91F4B1BAC00C34E27 /* FNMHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FNMHomeViewController.swift; sourceTree = "<group>"; };
 		8D0C03DB1F4B1EB600C34E27 /* FNMSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FNMSearchBar.swift; sourceTree = "<group>"; };
+		8D0C03DD1F4B266000C34E27 /* FNMRealTimeRankTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FNMRealTimeRankTableViewCell.swift; sourceTree = "<group>"; };
+		8D0C03DE1F4B266000C34E27 /* FNMRealTimeRankTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FNMRealTimeRankTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,9 +149,19 @@
 		8D0C03D81F4B1B8400C34E27 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				8D0C03E11F4B266600C34E27 /* View */,
 				8D0C03D91F4B1BAC00C34E27 /* FNMHomeViewController.swift */,
 			);
 			name = Home;
+			sourceTree = "<group>";
+		};
+		8D0C03E11F4B266600C34E27 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8D0C03DD1F4B266000C34E27 /* FNMRealTimeRankTableViewCell.swift */,
+				8D0C03DE1F4B266000C34E27 /* FNMRealTimeRankTableViewCell.xib */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +274,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D0C03E01F4B266000C34E27 /* FNMRealTimeRankTableViewCell.xib in Resources */,
 				8D0C03AF1F45DA6D00C34E27 /* LaunchScreen.storyboard in Resources */,
 				8D0C03AC1F45DA6D00C34E27 /* Assets.xcassets in Resources */,
 				8D0C03AA1F45DA6D00C34E27 /* Main.storyboard in Resources */,
@@ -291,6 +306,7 @@
 				8D0C03A51F45DA6D00C34E27 /* AppDelegate.swift in Sources */,
 				8D0C03D71F4B1B5800C34E27 /* FNMNavigationController.swift in Sources */,
 				8D0C03DC1F4B1EB600C34E27 /* FNMSearchBar.swift in Sources */,
+				8D0C03DF1F4B266000C34E27 /* FNMRealTimeRankTableViewCell.swift in Sources */,
 				8D0C03DA1F4B1BAC00C34E27 /* FNMHomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
