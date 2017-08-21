@@ -15,6 +15,7 @@
 		8D0C03C51F45DA6D00C34E27 /* FindingNemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0C03C41F45DA6D00C34E27 /* FindingNemoUITests.swift */; };
 		8D0C03D51F4B1B1500C34E27 /* FNMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0C03D41F4B1B1500C34E27 /* FNMViewController.swift */; };
 		8D0C03D71F4B1B5800C34E27 /* FNMNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0C03D61F4B1B5800C34E27 /* FNMNavigationController.swift */; };
+		8D0C03DA1F4B1BAC00C34E27 /* FNMHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0C03D91F4B1BAC00C34E27 /* FNMHomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		8D0C03C61F45DA6D00C34E27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D0C03D41F4B1B1500C34E27 /* FNMViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FNMViewController.swift; sourceTree = "<group>"; };
 		8D0C03D61F4B1B5800C34E27 /* FNMNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FNMNavigationController.swift; sourceTree = "<group>"; };
+		8D0C03D91F4B1BAC00C34E27 /* FNMHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FNMHomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		8D0C03A31F45DA6D00C34E27 /* FindingNemo */ = {
 			isa = PBXGroup;
 			children = (
+				8D0C03D81F4B1B8400C34E27 /* Home */,
 				8D0C03D31F4B1AF800C34E27 /* Foundation */,
 				8D0C03A41F45DA6D00C34E27 /* AppDelegate.swift */,
 				8D0C03A81F45DA6D00C34E27 /* Main.storyboard */,
@@ -134,6 +137,14 @@
 				8D0C03D61F4B1B5800C34E27 /* FNMNavigationController.swift */,
 			);
 			name = Foundation;
+			sourceTree = "<group>";
+		};
+		8D0C03D81F4B1B8400C34E27 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8D0C03D91F4B1BAC00C34E27 /* FNMHomeViewController.swift */,
+			);
+			name = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +287,7 @@
 				8D0C03D51F4B1B1500C34E27 /* FNMViewController.swift in Sources */,
 				8D0C03A51F45DA6D00C34E27 /* AppDelegate.swift in Sources */,
 				8D0C03D71F4B1B5800C34E27 /* FNMNavigationController.swift in Sources */,
+				8D0C03DA1F4B1BAC00C34E27 /* FNMHomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
