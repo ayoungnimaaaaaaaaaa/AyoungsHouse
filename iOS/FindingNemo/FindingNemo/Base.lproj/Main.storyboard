@@ -68,7 +68,7 @@
         <!--홈-->
         <scene sceneID="hOR-Ne-x2Y">
             <objects>
-                <viewController id="5Na-1l-MLt" sceneMemberID="viewController">
+                <viewController id="5Na-1l-MLt" customClass="FNMHomeViewController" customModule="FindingNemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mx3-vg-7YD"/>
                         <viewControllerLayoutGuide type="bottom" id="q77-KO-QIP"/>
@@ -76,9 +76,40 @@
                     <view key="view" contentMode="scaleToFill" id="LVl-jn-ME1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="니모를 찾아서" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceB-xj-VUW">
+                                <rect key="frame" x="133" y="60" width="109" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" placeholder="검색" translatesAutoresizingMaskIntoConstraints="NO" id="py4-9e-SL5">
+                                <rect key="frame" x="20" y="104" width="335" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7KI-ux-qdY">
+                                <rect key="frame" x="10" y="168" width="355" height="440"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ceB-xj-VUW" firstAttribute="centerX" secondItem="LVl-jn-ME1" secondAttribute="centerX" id="0F1-6u-roW"/>
+                            <constraint firstItem="q77-KO-QIP" firstAttribute="top" secondItem="7KI-ux-qdY" secondAttribute="bottom" constant="10" id="2gf-CV-kgt"/>
+                            <constraint firstAttribute="trailing" secondItem="7KI-ux-qdY" secondAttribute="trailing" constant="10" id="8ia-Ev-nsG"/>
+                            <constraint firstItem="7KI-ux-qdY" firstAttribute="leading" secondItem="LVl-jn-ME1" secondAttribute="leading" constant="10" id="Lqz-A5-gGr"/>
+                            <constraint firstItem="ceB-xj-VUW" firstAttribute="top" secondItem="mx3-vg-7YD" secondAttribute="bottom" constant="40" id="OUP-z1-CZt"/>
+                            <constraint firstItem="7KI-ux-qdY" firstAttribute="top" secondItem="py4-9e-SL5" secondAttribute="bottom" constant="20" id="S6h-of-zrW"/>
+                            <constraint firstItem="py4-9e-SL5" firstAttribute="leading" secondItem="LVl-jn-ME1" secondAttribute="leading" constant="20" id="cG6-0h-tHy"/>
+                            <constraint firstItem="py4-9e-SL5" firstAttribute="top" secondItem="ceB-xj-VUW" secondAttribute="bottom" constant="20" id="qfC-NK-zlM"/>
+                            <constraint firstAttribute="trailing" secondItem="py4-9e-SL5" secondAttribute="trailing" constant="20" id="yXP-rU-Du0"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="홈" id="8h8-jq-JyG"/>
+                    <connections>
+                        <outlet property="searchBar" destination="py4-9e-SL5" id="35Z-rJ-GOb"/>
+                        <outlet property="tableView" destination="7KI-ux-qdY" id="mzO-3Q-AvC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AGh-ON-tpS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

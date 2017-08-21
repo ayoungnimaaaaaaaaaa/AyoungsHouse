@@ -9,6 +9,8 @@
 import UIKit
 
 class FNMHomeViewController: UIViewController {
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,5 +18,9 @@ class FNMHomeViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    private func setupSearchBar() {
+        
     }
 }
