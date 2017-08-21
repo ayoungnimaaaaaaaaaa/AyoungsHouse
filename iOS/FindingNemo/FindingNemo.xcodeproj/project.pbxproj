@@ -16,6 +16,7 @@
 		8D0C03D51F4B1B1500C34E27 /* FNMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0C03D41F4B1B1500C34E27 /* FNMViewController.swift */; };
 		8D0C03D71F4B1B5800C34E27 /* FNMNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0C03D61F4B1B5800C34E27 /* FNMNavigationController.swift */; };
 		8D0C03DA1F4B1BAC00C34E27 /* FNMHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0C03D91F4B1BAC00C34E27 /* FNMHomeViewController.swift */; };
+		8D0C03DC1F4B1EB600C34E27 /* FNMSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0C03DB1F4B1EB600C34E27 /* FNMSearchBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		8D0C03D41F4B1B1500C34E27 /* FNMViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FNMViewController.swift; sourceTree = "<group>"; };
 		8D0C03D61F4B1B5800C34E27 /* FNMNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FNMNavigationController.swift; sourceTree = "<group>"; };
 		8D0C03D91F4B1BAC00C34E27 /* FNMHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FNMHomeViewController.swift; sourceTree = "<group>"; };
+		8D0C03DB1F4B1EB600C34E27 /* FNMSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FNMSearchBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 			children = (
 				8D0C03D41F4B1B1500C34E27 /* FNMViewController.swift */,
 				8D0C03D61F4B1B5800C34E27 /* FNMNavigationController.swift */,
+				8D0C03DB1F4B1EB600C34E27 /* FNMSearchBar.swift */,
 			);
 			name = Foundation;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				8D0C03D51F4B1B1500C34E27 /* FNMViewController.swift in Sources */,
 				8D0C03A51F45DA6D00C34E27 /* AppDelegate.swift in Sources */,
 				8D0C03D71F4B1B5800C34E27 /* FNMNavigationController.swift in Sources */,
+				8D0C03DC1F4B1EB600C34E27 /* FNMSearchBar.swift in Sources */,
 				8D0C03DA1F4B1BAC00C34E27 /* FNMHomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
