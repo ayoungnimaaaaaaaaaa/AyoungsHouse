@@ -31,9 +31,26 @@
             <point key="canvasLocation" x="-2175" y="785"/>
         </scene>
         <!--피드-->
+        <scene sceneID="0Ki-ae-Xkg">
+            <objects>
+                <navigationController id="nml-w1-ytB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="피드" id="LiK-as-Sa0"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XKr-WS-UH6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="3GA-Bu-XfL" kind="relationship" relationship="rootViewController" id="mIP-IM-acd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="reO-by-PJ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1654" y="1440"/>
+        </scene>
+        <!--피드-->
         <scene sceneID="30i-Xy-z9C">
             <objects>
-                <viewController id="3GA-Bu-XfL" sceneMemberID="viewController">
+                <viewController id="3GA-Bu-XfL" customClass="FNMFeedViewController" customModule="FindingNemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wNG-IV-uPm"/>
                         <viewControllerLayoutGuide type="bottom" id="YCi-dU-d8z"/>
@@ -41,13 +58,29 @@
                     <view key="view" contentMode="scaleToFill" id="2cH-Wv-D4u">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4b5-qE-mtg">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YCi-dU-d8z" firstAttribute="top" secondItem="4b5-qE-mtg" secondAttribute="bottom" id="69I-d7-UfL"/>
+                            <constraint firstAttribute="trailing" secondItem="4b5-qE-mtg" secondAttribute="trailing" id="D3w-8P-K7i"/>
+                            <constraint firstItem="4b5-qE-mtg" firstAttribute="top" secondItem="wNG-IV-uPm" secondAttribute="bottom" id="HMo-EG-a9A"/>
+                            <constraint firstItem="4b5-qE-mtg" firstAttribute="leading" secondItem="2cH-Wv-D4u" secondAttribute="leading" id="aFn-Oz-Eoq"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="피드" id="12X-ep-z8G"/>
+                    <navigationItem key="navigationItem" id="FcA-u8-jTf"/>
+                    <connections>
+                        <outlet property="tableView" destination="4b5-qE-mtg" id="lBb-zm-eAv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oj9-e3-Nz3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1116" y="1137"/>
+            <point key="canvasLocation" x="-783" y="1440"/>
         </scene>
         <!--주변 보기-->
         <scene sceneID="SeV-MD-nkR">
@@ -145,10 +178,10 @@
             </objects>
             <point key="canvasLocation" x="-276" y="-13"/>
         </scene>
-        <!--Home View Controller-->
+        <!--홈-->
         <scene sceneID="hOR-Ne-x2Y">
             <objects>
-                <viewController id="5Na-1l-MLt" customClass="FNMHomeViewController" customModule="FindingNemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="홈" id="5Na-1l-MLt" customClass="FNMHomeViewController" customModule="FindingNemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mx3-vg-7YD"/>
                         <viewControllerLayoutGuide type="bottom" id="q77-KO-QIP"/>
@@ -230,7 +263,7 @@
                     <connections>
                         <segue destination="ouV-7l-xvj" kind="relationship" relationship="viewControllers" id="pQk-hw-tjB"/>
                         <segue destination="doU-Gh-p6C" kind="relationship" relationship="viewControllers" id="XJM-D2-NFe"/>
-                        <segue destination="3GA-Bu-XfL" kind="relationship" relationship="viewControllers" id="YBS-zy-BrU"/>
+                        <segue destination="nml-w1-ytB" kind="relationship" relationship="viewControllers" id="rYY-fn-JXr"/>
                         <segue destination="5e7-xm-3VH" kind="relationship" relationship="viewControllers" id="CL5-6Z-Wjl"/>
                         <segue destination="ggV-Jd-weS" kind="relationship" relationship="viewControllers" id="iOK-2K-tbl"/>
                     </connections>

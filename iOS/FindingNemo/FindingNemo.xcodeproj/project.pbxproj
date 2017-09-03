@@ -22,6 +22,7 @@
 		8DB8E1311F5BE3D700751244 /* FNMRestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB8E12F1F5BE3D700751244 /* FNMRestaurantDetailViewController.swift */; };
 		8DB8E1321F5BE3D700751244 /* FNMRestaurantDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DB8E1301F5BE3D700751244 /* FNMRestaurantDetailViewController.xib */; };
 		8DB8E1371F5BFD3C00751244 /* FNMNearbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB8E1351F5BFD3C00751244 /* FNMNearbyViewController.swift */; };
+		8DB8E13B1F5C032600751244 /* FNMFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB8E13A1F5C032600751244 /* FNMFeedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		8DB8E12F1F5BE3D700751244 /* FNMRestaurantDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FNMRestaurantDetailViewController.swift; sourceTree = "<group>"; };
 		8DB8E1301F5BE3D700751244 /* FNMRestaurantDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FNMRestaurantDetailViewController.xib; sourceTree = "<group>"; };
 		8DB8E1351F5BFD3C00751244 /* FNMNearbyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FNMNearbyViewController.swift; sourceTree = "<group>"; };
+		8DB8E13A1F5C032600751244 /* FNMFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FNMFeedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		8D0C03A31F45DA6D00C34E27 /* FindingNemo */ = {
 			isa = PBXGroup;
 			children = (
+				8DB8E1391F5C031300751244 /* Feed */,
 				8DB8E1341F5BFD0C00751244 /* Nearby */,
 				8DB8E12D1F5BE3AA00751244 /* Common */,
 				8D0C03D81F4B1B8400C34E27 /* Home */,
@@ -219,6 +222,14 @@
 				8DB8E1351F5BFD3C00751244 /* FNMNearbyViewController.swift */,
 			);
 			path = Nearby;
+			sourceTree = "<group>";
+		};
+		8DB8E1391F5C031300751244 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				8DB8E13A1F5C032600751244 /* FNMFeedViewController.swift */,
+			);
+			path = Feed;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D0C03D51F4B1B1500C34E27 /* FNMViewController.swift in Sources */,
+				8DB8E13B1F5C032600751244 /* FNMFeedViewController.swift in Sources */,
 				8DB8E1371F5BFD3C00751244 /* FNMNearbyViewController.swift in Sources */,
 				8DB8E1311F5BE3D700751244 /* FNMRestaurantDetailViewController.swift in Sources */,
 				8D0C03A51F45DA6D00C34E27 /* AppDelegate.swift in Sources */,
