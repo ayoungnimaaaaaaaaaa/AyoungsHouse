@@ -24,6 +24,7 @@
 		8DB8E1371F5BFD3C00751244 /* FNMNearbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB8E1351F5BFD3C00751244 /* FNMNearbyViewController.swift */; };
 		8DB8E13B1F5C032600751244 /* FNMFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB8E13A1F5C032600751244 /* FNMFeedViewController.swift */; };
 		8DB8E1411F5C4AF700751244 /* FNMMySpaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB8E13F1F5C4AF700751244 /* FNMMySpaceViewController.swift */; };
+		8DB8E1441F5C4F0800751244 /* FNMMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB8E1431F5C4F0800751244 /* FNMMoreViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		8DB8E1351F5BFD3C00751244 /* FNMNearbyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FNMNearbyViewController.swift; sourceTree = "<group>"; };
 		8DB8E13A1F5C032600751244 /* FNMFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FNMFeedViewController.swift; sourceTree = "<group>"; };
 		8DB8E13F1F5C4AF700751244 /* FNMMySpaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FNMMySpaceViewController.swift; sourceTree = "<group>"; };
+		8DB8E1431F5C4F0800751244 /* FNMMoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FNMMoreViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +249,7 @@
 		8DB8E13D1F5C4AE600751244 /* More */ = {
 			isa = PBXGroup;
 			children = (
+				8DB8E1431F5C4F0800751244 /* FNMMoreViewController.swift */,
 			);
 			path = More;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 				8D0C03D51F4B1B1500C34E27 /* FNMViewController.swift in Sources */,
 				8DB8E13B1F5C032600751244 /* FNMFeedViewController.swift in Sources */,
 				8DB8E1371F5BFD3C00751244 /* FNMNearbyViewController.swift in Sources */,
+				8DB8E1441F5C4F0800751244 /* FNMMoreViewController.swift in Sources */,
 				8DB8E1311F5BE3D700751244 /* FNMRestaurantDetailViewController.swift in Sources */,
 				8D0C03A51F45DA6D00C34E27 /* AppDelegate.swift in Sources */,
 				8D0C03D71F4B1B5800C34E27 /* FNMNavigationController.swift in Sources */,

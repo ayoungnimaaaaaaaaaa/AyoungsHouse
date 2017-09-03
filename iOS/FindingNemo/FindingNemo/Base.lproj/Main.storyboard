@@ -301,7 +301,24 @@
             </objects>
             <point key="canvasLocation" x="495" y="-3"/>
         </scene>
-        <!--더보기-->
+        <!--Navigation Controller-->
+        <scene sceneID="nY6-yr-VRb">
+            <objects>
+                <navigationController id="XHf-WB-Sfi" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="more" id="p9Y-UB-d7E"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="muY-A8-eKH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ggV-Jd-weS" kind="relationship" relationship="rootViewController" id="Qyv-7X-b9l"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TKq-uc-TUB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2175" y="-13"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="T38-hC-Ekx">
             <objects>
                 <viewController id="ggV-Jd-weS" sceneMemberID="viewController">
@@ -314,11 +331,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="더보기" id="aGb-aJ-1T6"/>
+                    <navigationItem key="navigationItem" id="sdU-Mh-oO9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aY4-Pu-P4l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2174" y="-42"/>
+            <point key="canvasLocation" x="-2998" y="-13"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ZVw-gZ-Xzd">
@@ -334,7 +351,7 @@
                         <segue destination="doU-Gh-p6C" kind="relationship" relationship="viewControllers" id="XJM-D2-NFe"/>
                         <segue destination="nml-w1-ytB" kind="relationship" relationship="viewControllers" id="rYY-fn-JXr"/>
                         <segue destination="bl5-uq-ZEO" kind="relationship" relationship="viewControllers" id="TBK-XT-Z8z"/>
-                        <segue destination="ggV-Jd-weS" kind="relationship" relationship="viewControllers" id="iOK-2K-tbl"/>
+                        <segue destination="XHf-WB-Sfi" kind="relationship" relationship="viewControllers" id="Muw-mP-Rht"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DHb-T6-X9z" userLabel="First Responder" sceneMemberID="firstResponder"/>
