@@ -233,7 +233,7 @@
 		8DB8E1391F5C031300751244 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				8DB8E13A1F5C032600751244 /* FNMFeedViewController.swift */,
+				8DB8E1461F5C4FA000751244 /* Controller */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -249,7 +249,7 @@
 		8DB8E13D1F5C4AE600751244 /* More */ = {
 			isa = PBXGroup;
 			children = (
-				8DB8E1431F5C4F0800751244 /* FNMMoreViewController.swift */,
+				8DB8E1451F5C4F9500751244 /* Controller */,
 			);
 			path = More;
 			sourceTree = "<group>";
@@ -258,6 +258,22 @@
 			isa = PBXGroup;
 			children = (
 				8DB8E13F1F5C4AF700751244 /* FNMMySpaceViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8DB8E1451F5C4F9500751244 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8DB8E1431F5C4F0800751244 /* FNMMoreViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8DB8E1461F5C4FA000751244 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8DB8E13A1F5C032600751244 /* FNMFeedViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

@@ -329,7 +329,19 @@
                     <view key="view" contentMode="scaleToFill" id="sg2-JT-ova">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="6Td-DD-MKV">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fdh-Eq-mFe" firstAttribute="top" secondItem="6Td-DD-MKV" secondAttribute="bottom" id="1D3-27-ohr"/>
+                            <constraint firstAttribute="trailing" secondItem="6Td-DD-MKV" secondAttribute="trailing" id="E4o-Pg-Ws3"/>
+                            <constraint firstItem="6Td-DD-MKV" firstAttribute="leading" secondItem="sg2-JT-ova" secondAttribute="leading" id="PdM-qu-Feh"/>
+                            <constraint firstItem="6Td-DD-MKV" firstAttribute="top" secondItem="Ilw-14-VMH" secondAttribute="bottom" id="jF3-gi-9We"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sdU-Mh-oO9"/>
                 </viewController>
