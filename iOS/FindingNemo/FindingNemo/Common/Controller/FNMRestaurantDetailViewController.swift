@@ -20,8 +20,8 @@ class FNMRestaurantDetailViewController: FNMViewController {
     }
     
     private func setupNavigationBar() {
-        self.navigationItem.title = "식당 이름"
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "리뷰 작성", style: .plain, target: self, action: nil)
+        navigationItem.title = "식당 이름"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "리뷰 작성", style: .plain, target: self, action: nil)
     }
 }
 

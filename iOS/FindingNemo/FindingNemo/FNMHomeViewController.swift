@@ -16,11 +16,16 @@ class FNMHomeViewController: FNMViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavigationBar()
         setupTableView()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    private func setupNavigationBar() {
+        navigationItem.title = "홈"
     }
     
     private func setupTableView() {

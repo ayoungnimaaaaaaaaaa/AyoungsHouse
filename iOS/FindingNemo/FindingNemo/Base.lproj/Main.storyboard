@@ -12,9 +12,26 @@
     </dependencies>
     <scenes>
         <!--내 공간-->
+        <scene sceneID="r8z-xn-Oxo">
+            <objects>
+                <navigationController id="bl5-uq-ZEO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="내 공간" id="Sdq-nz-5We"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BXa-px-uZg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="5e7-xm-3VH" kind="relationship" relationship="rootViewController" id="29L-1N-eHi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MbI-jk-lgT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2175" y="743"/>
+        </scene>
+        <!--내 공간-->
         <scene sceneID="t3U-bD-RP0">
             <objects>
-                <viewController id="5e7-xm-3VH" sceneMemberID="viewController">
+                <viewController id="5e7-xm-3VH" customClass="FNMMySpaceViewController" customModule="FindingNemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7Iy-Oh-hMW"/>
                         <viewControllerLayoutGuide type="bottom" id="ZCD-8o-PfR"/>
@@ -25,10 +42,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="내 공간" id="77M-6n-Kbm"/>
+                    <navigationItem key="navigationItem" id="O0v-hQ-K3R"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qIK-QK-dAV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2175" y="785"/>
+            <point key="canvasLocation" x="-3038" y="743"/>
         </scene>
         <!--피드-->
         <scene sceneID="0Ki-ae-Xkg">
@@ -264,7 +282,7 @@
                         <segue destination="ouV-7l-xvj" kind="relationship" relationship="viewControllers" id="pQk-hw-tjB"/>
                         <segue destination="doU-Gh-p6C" kind="relationship" relationship="viewControllers" id="XJM-D2-NFe"/>
                         <segue destination="nml-w1-ytB" kind="relationship" relationship="viewControllers" id="rYY-fn-JXr"/>
-                        <segue destination="5e7-xm-3VH" kind="relationship" relationship="viewControllers" id="CL5-6Z-Wjl"/>
+                        <segue destination="bl5-uq-ZEO" kind="relationship" relationship="viewControllers" id="TBK-XT-Z8z"/>
                         <segue destination="ggV-Jd-weS" kind="relationship" relationship="viewControllers" id="iOK-2K-tbl"/>
                     </connections>
                 </tabBarController>

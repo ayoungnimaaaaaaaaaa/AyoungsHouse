@@ -23,6 +23,7 @@
 		8DB8E1321F5BE3D700751244 /* FNMRestaurantDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DB8E1301F5BE3D700751244 /* FNMRestaurantDetailViewController.xib */; };
 		8DB8E1371F5BFD3C00751244 /* FNMNearbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB8E1351F5BFD3C00751244 /* FNMNearbyViewController.swift */; };
 		8DB8E13B1F5C032600751244 /* FNMFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB8E13A1F5C032600751244 /* FNMFeedViewController.swift */; };
+		8DB8E1411F5C4AF700751244 /* FNMMySpaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB8E13F1F5C4AF700751244 /* FNMMySpaceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		8DB8E1301F5BE3D700751244 /* FNMRestaurantDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FNMRestaurantDetailViewController.xib; sourceTree = "<group>"; };
 		8DB8E1351F5BFD3C00751244 /* FNMNearbyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FNMNearbyViewController.swift; sourceTree = "<group>"; };
 		8DB8E13A1F5C032600751244 /* FNMFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FNMFeedViewController.swift; sourceTree = "<group>"; };
+		8DB8E13F1F5C4AF700751244 /* FNMMySpaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FNMMySpaceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,9 +117,11 @@
 		8D0C03A31F45DA6D00C34E27 /* FindingNemo */ = {
 			isa = PBXGroup;
 			children = (
+				8DB8E12D1F5BE3AA00751244 /* Common */,
+				8DB8E13D1F5C4AE600751244 /* More */,
+				8DB8E13C1F5C4AE100751244 /* MySpace */,
 				8DB8E1391F5C031300751244 /* Feed */,
 				8DB8E1341F5BFD0C00751244 /* Nearby */,
-				8DB8E12D1F5BE3AA00751244 /* Common */,
 				8D0C03D81F4B1B8400C34E27 /* Home */,
 				8D0C03D31F4B1AF800C34E27 /* Foundation */,
 				8D0C03A41F45DA6D00C34E27 /* AppDelegate.swift */,
@@ -230,6 +234,29 @@
 				8DB8E13A1F5C032600751244 /* FNMFeedViewController.swift */,
 			);
 			path = Feed;
+			sourceTree = "<group>";
+		};
+		8DB8E13C1F5C4AE100751244 /* MySpace */ = {
+			isa = PBXGroup;
+			children = (
+				8DB8E13E1F5C4AEA00751244 /* Controller */,
+			);
+			path = MySpace;
+			sourceTree = "<group>";
+		};
+		8DB8E13D1F5C4AE600751244 /* More */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
+		8DB8E13E1F5C4AEA00751244 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8DB8E13F1F5C4AF700751244 /* FNMMySpaceViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -381,6 +408,7 @@
 				8D0C03A51F45DA6D00C34E27 /* AppDelegate.swift in Sources */,
 				8D0C03D71F4B1B5800C34E27 /* FNMNavigationController.swift in Sources */,
 				8DB8E12B1F5AD26000751244 /* FNMRealtimeRestaurantTableViewCell.swift in Sources */,
+				8DB8E1411F5C4AF700751244 /* FNMMySpaceViewController.swift in Sources */,
 				8D0C03DC1F4B1EB600C34E27 /* FNMSearchBar.swift in Sources */,
 				8D0C03DA1F4B1BAC00C34E27 /* FNMHomeViewController.swift in Sources */,
 			);

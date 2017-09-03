@@ -15,17 +15,20 @@ class FNMNearbyViewController: FNMViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavigationBar()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
+    private func setupNavigationBar() {
+        navigationItem.title = "주변 보기"
+    }
+    
     @IBAction func didChangedSegmentedControl(_ sender: UISegmentedControl) {
         print(sender.selectedSegmentIndex)
     }
-    
-    
 }
 
 extension FNMNearbyViewController: UITableViewDataSource {
