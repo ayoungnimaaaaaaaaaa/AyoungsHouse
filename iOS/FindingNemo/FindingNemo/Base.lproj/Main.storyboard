@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="HnU-ck-mpt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="HnU-ck-mpt">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -66,6 +68,23 @@
             <point key="canvasLocation" x="-161" y="767"/>
         </scene>
         <!--홈-->
+        <scene sceneID="fAG-K8-dje">
+            <objects>
+                <navigationController id="ouV-7l-xvj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="홈" id="ZCt-PB-5Hd"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0ic-vk-7D1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="5Na-1l-MLt" kind="relationship" relationship="rootViewController" id="1XS-8v-c0P"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nm7-fm-wug" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-276" y="-13"/>
+        </scene>
+        <!--Home View Controller-->
         <scene sceneID="hOR-Ne-x2Y">
             <objects>
                 <viewController id="5Na-1l-MLt" customClass="FNMHomeViewController" customModule="FindingNemo" customModuleProvider="target" sceneMemberID="viewController">
@@ -78,34 +97,38 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="니모를 찾아서" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceB-xj-VUW">
-                                <rect key="frame" x="133" y="60" width="109" height="24"/>
+                                <rect key="frame" x="133" y="104.5" width="109" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <searchBar contentMode="redraw" placeholder="검색" translatesAutoresizingMaskIntoConstraints="NO" id="py4-9e-SL5" customClass="FNMSearchBar" customModule="FindingNemo" customModuleProvider="target">
-                                <rect key="frame" x="20" y="104" width="335" height="44"/>
+                                <rect key="frame" x="15" y="158.5" width="345" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7KI-ux-qdY">
-                                <rect key="frame" x="10" y="168" width="355" height="440"/>
+                                <rect key="frame" x="20" y="234.5" width="335" height="368.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="5Na-1l-MLt" id="1lo-mr-zTZ"/>
+                                    <outlet property="delegate" destination="5Na-1l-MLt" id="bKJ-Z1-pnr"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ceB-xj-VUW" firstAttribute="centerX" secondItem="LVl-jn-ME1" secondAttribute="centerX" id="0F1-6u-roW"/>
-                            <constraint firstItem="q77-KO-QIP" firstAttribute="top" secondItem="7KI-ux-qdY" secondAttribute="bottom" constant="10" id="2gf-CV-kgt"/>
-                            <constraint firstAttribute="trailing" secondItem="7KI-ux-qdY" secondAttribute="trailing" constant="10" id="8ia-Ev-nsG"/>
-                            <constraint firstItem="7KI-ux-qdY" firstAttribute="leading" secondItem="LVl-jn-ME1" secondAttribute="leading" constant="10" id="Lqz-A5-gGr"/>
-                            <constraint firstItem="ceB-xj-VUW" firstAttribute="top" secondItem="mx3-vg-7YD" secondAttribute="bottom" constant="40" id="OUP-z1-CZt"/>
+                            <constraint firstItem="q77-KO-QIP" firstAttribute="top" secondItem="7KI-ux-qdY" secondAttribute="bottom" constant="15" id="2gf-CV-kgt"/>
+                            <constraint firstAttribute="trailing" secondItem="7KI-ux-qdY" secondAttribute="trailing" constant="20" id="8ia-Ev-nsG"/>
+                            <constraint firstItem="7KI-ux-qdY" firstAttribute="leading" secondItem="LVl-jn-ME1" secondAttribute="leading" constant="20" id="Lqz-A5-gGr"/>
                             <constraint firstItem="7KI-ux-qdY" firstAttribute="top" secondItem="py4-9e-SL5" secondAttribute="bottom" constant="20" id="S6h-of-zrW"/>
-                            <constraint firstItem="py4-9e-SL5" firstAttribute="leading" secondItem="LVl-jn-ME1" secondAttribute="leading" constant="20" id="cG6-0h-tHy"/>
-                            <constraint firstItem="py4-9e-SL5" firstAttribute="top" secondItem="ceB-xj-VUW" secondAttribute="bottom" constant="20" id="qfC-NK-zlM"/>
-                            <constraint firstAttribute="trailing" secondItem="py4-9e-SL5" secondAttribute="trailing" constant="20" id="yXP-rU-Du0"/>
+                            <constraint firstItem="py4-9e-SL5" firstAttribute="leading" secondItem="LVl-jn-ME1" secondAttribute="leading" constant="15" id="cG6-0h-tHy"/>
+                            <constraint firstItem="ceB-xj-VUW" firstAttribute="centerY" secondItem="LVl-jn-ME1" secondAttribute="centerY" multiplier="0.35" id="gwN-P4-MAN"/>
+                            <constraint firstItem="py4-9e-SL5" firstAttribute="top" secondItem="ceB-xj-VUW" secondAttribute="bottom" constant="30" id="qfC-NK-zlM"/>
+                            <constraint firstAttribute="trailing" secondItem="py4-9e-SL5" secondAttribute="trailing" constant="15" id="yXP-rU-Du0"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="홈" id="8h8-jq-JyG"/>
+                    <navigationItem key="navigationItem" id="wqd-XK-HBf"/>
                     <connections>
                         <outlet property="searchBar" destination="py4-9e-SL5" id="35Z-rJ-GOb"/>
                         <outlet property="tableView" destination="7KI-ux-qdY" id="mzO-3Q-AvC"/>
@@ -113,7 +136,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AGh-ON-tpS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-162" y="4"/>
+            <point key="canvasLocation" x="495" y="-3"/>
         </scene>
         <!--더보기-->
         <scene sceneID="T38-hC-Ekx">
@@ -144,7 +167,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="5Na-1l-MLt" kind="relationship" relationship="viewControllers" id="qPw-dL-ooz"/>
+                        <segue destination="ouV-7l-xvj" kind="relationship" relationship="viewControllers" id="pQk-hw-tjB"/>
                         <segue destination="gwW-jz-p4o" kind="relationship" relationship="viewControllers" id="Pg2-W0-fYL"/>
                         <segue destination="3GA-Bu-XfL" kind="relationship" relationship="viewControllers" id="YBS-zy-BrU"/>
                         <segue destination="5e7-xm-3VH" kind="relationship" relationship="viewControllers" id="CL5-6Z-Wjl"/>

@@ -17,8 +17,10 @@
 		8D0C03D71F4B1B5800C34E27 /* FNMNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0C03D61F4B1B5800C34E27 /* FNMNavigationController.swift */; };
 		8D0C03DA1F4B1BAC00C34E27 /* FNMHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0C03D91F4B1BAC00C34E27 /* FNMHomeViewController.swift */; };
 		8D0C03DC1F4B1EB600C34E27 /* FNMSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0C03DB1F4B1EB600C34E27 /* FNMSearchBar.swift */; };
-		8D0C03DF1F4B266000C34E27 /* FNMRealTimeRankTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0C03DD1F4B266000C34E27 /* FNMRealTimeRankTableViewCell.swift */; };
-		8D0C03E01F4B266000C34E27 /* FNMRealTimeRankTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D0C03DE1F4B266000C34E27 /* FNMRealTimeRankTableViewCell.xib */; };
+		8DB8E12B1F5AD26000751244 /* FNMRealtimeRestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB8E1291F5AD26000751244 /* FNMRealtimeRestaurantTableViewCell.swift */; };
+		8DB8E12C1F5AD26000751244 /* FNMRealtimeRestaurantTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DB8E12A1F5AD26000751244 /* FNMRealtimeRestaurantTableViewCell.xib */; };
+		8DB8E1311F5BE3D700751244 /* FNMRestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB8E12F1F5BE3D700751244 /* FNMRestaurantDetailViewController.swift */; };
+		8DB8E1321F5BE3D700751244 /* FNMRestaurantDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DB8E1301F5BE3D700751244 /* FNMRestaurantDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +57,10 @@
 		8D0C03D61F4B1B5800C34E27 /* FNMNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FNMNavigationController.swift; sourceTree = "<group>"; };
 		8D0C03D91F4B1BAC00C34E27 /* FNMHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FNMHomeViewController.swift; sourceTree = "<group>"; };
 		8D0C03DB1F4B1EB600C34E27 /* FNMSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FNMSearchBar.swift; sourceTree = "<group>"; };
-		8D0C03DD1F4B266000C34E27 /* FNMRealTimeRankTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FNMRealTimeRankTableViewCell.swift; sourceTree = "<group>"; };
-		8D0C03DE1F4B266000C34E27 /* FNMRealTimeRankTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FNMRealTimeRankTableViewCell.xib; sourceTree = "<group>"; };
+		8DB8E1291F5AD26000751244 /* FNMRealtimeRestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FNMRealtimeRestaurantTableViewCell.swift; sourceTree = "<group>"; };
+		8DB8E12A1F5AD26000751244 /* FNMRealtimeRestaurantTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FNMRealtimeRestaurantTableViewCell.xib; sourceTree = "<group>"; };
+		8DB8E12F1F5BE3D700751244 /* FNMRestaurantDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FNMRestaurantDetailViewController.swift; sourceTree = "<group>"; };
+		8DB8E1301F5BE3D700751244 /* FNMRestaurantDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FNMRestaurantDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 		8D0C03A31F45DA6D00C34E27 /* FindingNemo */ = {
 			isa = PBXGroup;
 			children = (
+				8DB8E12D1F5BE3AA00751244 /* Common */,
 				8D0C03D81F4B1B8400C34E27 /* Home */,
 				8D0C03D31F4B1AF800C34E27 /* Foundation */,
 				8D0C03A41F45DA6D00C34E27 /* AppDelegate.swift */,
@@ -149,19 +154,52 @@
 		8D0C03D81F4B1B8400C34E27 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				8D0C03E11F4B266600C34E27 /* View */,
-				8D0C03D91F4B1BAC00C34E27 /* FNMHomeViewController.swift */,
+				8DB8E1281F5AB36F00751244 /* Model */,
+				8DB8E1271F5AB36B00751244 /* View */,
+				8D0C03E21F4F11E200C34E27 /* Controller */,
 			);
 			name = Home;
 			sourceTree = "<group>";
 		};
-		8D0C03E11F4B266600C34E27 /* View */ = {
+		8D0C03E21F4F11E200C34E27 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8D0C03DD1F4B266000C34E27 /* FNMRealTimeRankTableViewCell.swift */,
-				8D0C03DE1F4B266000C34E27 /* FNMRealTimeRankTableViewCell.xib */,
+				8D0C03D91F4B1BAC00C34E27 /* FNMHomeViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		8DB8E1271F5AB36B00751244 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8DB8E1291F5AD26000751244 /* FNMRealtimeRestaurantTableViewCell.swift */,
+				8DB8E12A1F5AD26000751244 /* FNMRealtimeRestaurantTableViewCell.xib */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		8DB8E1281F5AB36F00751244 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8DB8E12D1F5BE3AA00751244 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8DB8E12E1F5BE3B100751244 /* Controller */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		8DB8E12E1F5BE3B100751244 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8DB8E12F1F5BE3D700751244 /* FNMRestaurantDetailViewController.swift */,
+				8DB8E1301F5BE3D700751244 /* FNMRestaurantDetailViewController.xib */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,10 +312,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D0C03E01F4B266000C34E27 /* FNMRealTimeRankTableViewCell.xib in Resources */,
+				8DB8E12C1F5AD26000751244 /* FNMRealtimeRestaurantTableViewCell.xib in Resources */,
 				8D0C03AF1F45DA6D00C34E27 /* LaunchScreen.storyboard in Resources */,
 				8D0C03AC1F45DA6D00C34E27 /* Assets.xcassets in Resources */,
 				8D0C03AA1F45DA6D00C34E27 /* Main.storyboard in Resources */,
+				8DB8E1321F5BE3D700751244 /* FNMRestaurantDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,10 +342,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D0C03D51F4B1B1500C34E27 /* FNMViewController.swift in Sources */,
+				8DB8E1311F5BE3D700751244 /* FNMRestaurantDetailViewController.swift in Sources */,
 				8D0C03A51F45DA6D00C34E27 /* AppDelegate.swift in Sources */,
 				8D0C03D71F4B1B5800C34E27 /* FNMNavigationController.swift in Sources */,
+				8DB8E12B1F5AD26000751244 /* FNMRealtimeRestaurantTableViewCell.swift in Sources */,
 				8D0C03DC1F4B1EB600C34E27 /* FNMSearchBar.swift in Sources */,
-				8D0C03DF1F4B266000C34E27 /* FNMRealTimeRankTableViewCell.swift in Sources */,
 				8D0C03DA1F4B1BAC00C34E27 /* FNMHomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -562,6 +602,7 @@
 				8D0C03CB1F45DA6D00C34E27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8D0C03CC1F45DA6D00C34E27 /* Build configuration list for PBXNativeTarget "FindingNemoTests" */ = {
 			isa = XCConfigurationList;
@@ -570,6 +611,7 @@
 				8D0C03CE1F45DA6D00C34E27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8D0C03CF1F45DA6D00C34E27 /* Build configuration list for PBXNativeTarget "FindingNemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -578,6 +620,7 @@
 				8D0C03D11F45DA6D00C34E27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
