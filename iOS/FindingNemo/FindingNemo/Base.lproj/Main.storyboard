@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -51,7 +52,7 @@
         <!--주변 보기-->
         <scene sceneID="SeV-MD-nkR">
             <objects>
-                <viewController id="gwW-jz-p4o" sceneMemberID="viewController">
+                <viewController id="gwW-jz-p4o" customClass="FNMNearbyViewController" customModule="FindingNemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ub1-xZ-CP1"/>
                         <viewControllerLayoutGuide type="bottom" id="fVZ-Zu-4PV"/>
@@ -59,13 +60,73 @@
                     <view key="view" contentMode="scaleToFill" id="dIe-lF-Dyl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Bda-Fq-Il4">
+                                <rect key="frame" x="0.0" y="64" width="375" height="29"/>
+                                <segments>
+                                    <segment title="전체"/>
+                                    <segment title="한식"/>
+                                    <segment title="중식"/>
+                                    <segment title="일식"/>
+                                    <segment title="양식"/>
+                                    <segment title="기타"/>
+                                </segments>
+                                <connections>
+                                    <action selector="didChangedSegmentedControl:" destination="gwW-jz-p4o" eventType="valueChanged" id="7mH-jl-iGv"/>
+                                </connections>
+                            </segmentedControl>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="M0L-nS-s4y">
+                                <rect key="frame" x="0.0" y="94" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="M0L-nS-s4y" secondAttribute="height" multiplier="1:1" id="ovX-06-N2F"/>
+                                </constraints>
+                            </mapView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rwz-Gq-t1f">
+                                <rect key="frame" x="0.0" y="469" width="375" height="149"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rwz-Gq-t1f" firstAttribute="leading" secondItem="dIe-lF-Dyl" secondAttribute="leading" id="1yV-zq-4nm"/>
+                            <constraint firstItem="Bda-Fq-Il4" firstAttribute="leading" secondItem="dIe-lF-Dyl" secondAttribute="leading" id="9cM-7x-YHq"/>
+                            <constraint firstItem="M0L-nS-s4y" firstAttribute="top" secondItem="Bda-Fq-Il4" secondAttribute="bottom" constant="2" id="Ftf-n3-QiK"/>
+                            <constraint firstItem="Bda-Fq-Il4" firstAttribute="top" secondItem="ub1-xZ-CP1" secondAttribute="bottom" id="L7h-0l-Zom"/>
+                            <constraint firstAttribute="trailing" secondItem="rwz-Gq-t1f" secondAttribute="trailing" id="LJy-2r-HPc"/>
+                            <constraint firstItem="fVZ-Zu-4PV" firstAttribute="top" secondItem="rwz-Gq-t1f" secondAttribute="bottom" id="XXI-6I-MKi"/>
+                            <constraint firstItem="M0L-nS-s4y" firstAttribute="leading" secondItem="dIe-lF-Dyl" secondAttribute="leading" id="YLj-OZ-h6d"/>
+                            <constraint firstAttribute="trailing" secondItem="M0L-nS-s4y" secondAttribute="trailing" id="YuU-9K-Ygk"/>
+                            <constraint firstItem="rwz-Gq-t1f" firstAttribute="top" secondItem="M0L-nS-s4y" secondAttribute="bottom" id="pUe-gY-Tkx"/>
+                            <constraint firstAttribute="trailing" secondItem="Bda-Fq-Il4" secondAttribute="trailing" id="zxm-EW-l1D"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="주변 보기" id="nge-6Q-SOg"/>
+                    <navigationItem key="navigationItem" id="h5H-pc-Cca"/>
+                    <connections>
+                        <outlet property="mapView" destination="M0L-nS-s4y" id="vTP-h3-UDz"/>
+                        <outlet property="tableView" destination="rwz-Gq-t1f" id="wfg-RE-fVy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jCv-vL-uFM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-161" y="767"/>
+            <point key="canvasLocation" x="494" y="768"/>
+        </scene>
+        <!--주변 보기-->
+        <scene sceneID="MGS-g8-QL9">
+            <objects>
+                <navigationController id="doU-Gh-p6C" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="주변 보기" id="KU4-SB-7bz"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yau-iU-C7f">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="gwW-jz-p4o" kind="relationship" relationship="rootViewController" id="SCf-Di-eWJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QlM-t1-WHP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-276" y="768"/>
         </scene>
         <!--홈-->
         <scene sceneID="fAG-K8-dje">
@@ -168,7 +229,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="ouV-7l-xvj" kind="relationship" relationship="viewControllers" id="pQk-hw-tjB"/>
-                        <segue destination="gwW-jz-p4o" kind="relationship" relationship="viewControllers" id="Pg2-W0-fYL"/>
+                        <segue destination="doU-Gh-p6C" kind="relationship" relationship="viewControllers" id="XJM-D2-NFe"/>
                         <segue destination="3GA-Bu-XfL" kind="relationship" relationship="viewControllers" id="YBS-zy-BrU"/>
                         <segue destination="5e7-xm-3VH" kind="relationship" relationship="viewControllers" id="CL5-6Z-Wjl"/>
                         <segue destination="ggV-Jd-weS" kind="relationship" relationship="viewControllers" id="iOK-2K-tbl"/>
