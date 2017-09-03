@@ -21,6 +21,8 @@
 		8DB8E12C1F5AD26000751244 /* FNMRealtimeRestaurantTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DB8E12A1F5AD26000751244 /* FNMRealtimeRestaurantTableViewCell.xib */; };
 		8DB8E1311F5BE3D700751244 /* FNMRestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB8E12F1F5BE3D700751244 /* FNMRestaurantDetailViewController.swift */; };
 		8DB8E1321F5BE3D700751244 /* FNMRestaurantDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DB8E1301F5BE3D700751244 /* FNMRestaurantDetailViewController.xib */; };
+		8DB8E1371F5BFD3C00751244 /* FNMNearbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB8E1351F5BFD3C00751244 /* FNMNearbyViewController.swift */; };
+		8DB8E1381F5BFD3C00751244 /* FNMNearbyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DB8E1361F5BFD3C00751244 /* FNMNearbyViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		8DB8E12A1F5AD26000751244 /* FNMRealtimeRestaurantTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FNMRealtimeRestaurantTableViewCell.xib; sourceTree = "<group>"; };
 		8DB8E12F1F5BE3D700751244 /* FNMRestaurantDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FNMRestaurantDetailViewController.swift; sourceTree = "<group>"; };
 		8DB8E1301F5BE3D700751244 /* FNMRestaurantDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FNMRestaurantDetailViewController.xib; sourceTree = "<group>"; };
+		8DB8E1351F5BFD3C00751244 /* FNMNearbyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FNMNearbyViewController.swift; sourceTree = "<group>"; };
+		8DB8E1361F5BFD3C00751244 /* FNMNearbyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FNMNearbyViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,7 @@
 		8D0C03A31F45DA6D00C34E27 /* FindingNemo */ = {
 			isa = PBXGroup;
 			children = (
+				8DB8E1341F5BFD0C00751244 /* Nearby */,
 				8DB8E12D1F5BE3AA00751244 /* Common */,
 				8D0C03D81F4B1B8400C34E27 /* Home */,
 				8D0C03D31F4B1AF800C34E27 /* Foundation */,
@@ -188,6 +193,7 @@
 		8DB8E12D1F5BE3AA00751244 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				8DB8E1331F5BEFB300751244 /* View */,
 				8DB8E12E1F5BE3B100751244 /* Controller */,
 			);
 			path = Common;
@@ -200,6 +206,22 @@
 				8DB8E1301F5BE3D700751244 /* FNMRestaurantDetailViewController.xib */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		8DB8E1331F5BEFB300751244 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8DB8E1341F5BFD0C00751244 /* Nearby */ = {
+			isa = PBXGroup;
+			children = (
+				8DB8E1351F5BFD3C00751244 /* FNMNearbyViewController.swift */,
+				8DB8E1361F5BFD3C00751244 /* FNMNearbyViewController.xib */,
+			);
+			path = Nearby;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,6 +339,7 @@
 				8D0C03AC1F45DA6D00C34E27 /* Assets.xcassets in Resources */,
 				8D0C03AA1F45DA6D00C34E27 /* Main.storyboard in Resources */,
 				8DB8E1321F5BE3D700751244 /* FNMRestaurantDetailViewController.xib in Resources */,
+				8DB8E1381F5BFD3C00751244 /* FNMNearbyViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D0C03D51F4B1B1500C34E27 /* FNMViewController.swift in Sources */,
+				8DB8E1371F5BFD3C00751244 /* FNMNearbyViewController.swift in Sources */,
 				8DB8E1311F5BE3D700751244 /* FNMRestaurantDetailViewController.swift in Sources */,
 				8D0C03A51F45DA6D00C34E27 /* AppDelegate.swift in Sources */,
 				8D0C03D71F4B1B5800C34E27 /* FNMNavigationController.swift in Sources */,
