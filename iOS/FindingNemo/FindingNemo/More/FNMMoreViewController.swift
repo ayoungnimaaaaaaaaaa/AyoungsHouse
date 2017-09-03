@@ -12,9 +12,14 @@ class FNMMoreViewController: FNMViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavigationBar()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    private func setupNavigationBar() {
+        navigationItem.title = "더보기"
     }
 }

@@ -318,10 +318,10 @@
             </objects>
             <point key="canvasLocation" x="-2175" y="-13"/>
         </scene>
-        <!--View Controller-->
+        <!--More View Controller-->
         <scene sceneID="T38-hC-Ekx">
             <objects>
-                <viewController id="ggV-Jd-weS" sceneMemberID="viewController">
+                <viewController id="ggV-Jd-weS" customClass="FNMMoreViewController" customModule="FindingNemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ilw-14-VMH"/>
                         <viewControllerLayoutGuide type="bottom" id="fdh-Eq-mFe"/>
