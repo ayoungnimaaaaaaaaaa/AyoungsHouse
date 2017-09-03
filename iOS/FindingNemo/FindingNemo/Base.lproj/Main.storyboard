@@ -39,7 +39,58 @@
                     <view key="view" contentMode="scaleToFill" id="Ec7-zj-LQA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="검색" translatesAutoresizingMaskIntoConstraints="NO" id="ASe-Qm-4Mi" customClass="FNMSearchBar" customModule="FindingNemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6ae-t5-2vK">
+                                <rect key="frame" x="0.0" y="120" width="375" height="25"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="리뷰 목록" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXC-Z3-TyC">
+                                        <rect key="frame" x="12" y="0.0" width="56" height="25"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m20-2h-6vp">
+                                        <rect key="frame" x="326" y="0.0" width="37" height="25"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <state key="normal" title="날짜순">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="YXC-Z3-TyC" firstAttribute="leading" secondItem="6ae-t5-2vK" secondAttribute="leading" constant="12" id="1Mm-zd-LhJ"/>
+                                    <constraint firstItem="m20-2h-6vp" firstAttribute="top" secondItem="6ae-t5-2vK" secondAttribute="top" id="4sc-GO-Zrq"/>
+                                    <constraint firstAttribute="trailing" secondItem="m20-2h-6vp" secondAttribute="trailing" constant="12" id="Tpb-AO-7Q9"/>
+                                    <constraint firstItem="YXC-Z3-TyC" firstAttribute="top" secondItem="6ae-t5-2vK" secondAttribute="top" id="Ueo-gy-HTr"/>
+                                    <constraint firstAttribute="bottom" secondItem="m20-2h-6vp" secondAttribute="bottom" id="WdG-1D-1mz"/>
+                                    <constraint firstAttribute="height" constant="25" id="bwC-IV-Y21"/>
+                                    <constraint firstAttribute="bottom" secondItem="YXC-Z3-TyC" secondAttribute="bottom" id="hwZ-MY-U5u"/>
+                                    <constraint firstItem="m20-2h-6vp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="YXC-Z3-TyC" secondAttribute="trailing" id="rCj-6o-AbM"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="X3X-TP-Zd2">
+                                <rect key="frame" x="0.0" y="145" width="375" height="473"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6ae-t5-2vK" firstAttribute="leading" secondItem="Ec7-zj-LQA" secondAttribute="leading" id="7AF-Ny-fD1"/>
+                            <constraint firstItem="ZCD-8o-PfR" firstAttribute="top" secondItem="X3X-TP-Zd2" secondAttribute="bottom" id="HnP-cs-ktI"/>
+                            <constraint firstItem="ASe-Qm-4Mi" firstAttribute="top" secondItem="7Iy-Oh-hMW" secondAttribute="bottom" id="Jg5-Y3-gSH"/>
+                            <constraint firstItem="X3X-TP-Zd2" firstAttribute="leading" secondItem="Ec7-zj-LQA" secondAttribute="leading" id="K7X-VK-9gz"/>
+                            <constraint firstItem="X3X-TP-Zd2" firstAttribute="top" secondItem="6ae-t5-2vK" secondAttribute="bottom" id="cdJ-pk-Oye"/>
+                            <constraint firstAttribute="trailing" secondItem="6ae-t5-2vK" secondAttribute="trailing" id="gAY-AY-a3k"/>
+                            <constraint firstItem="ASe-Qm-4Mi" firstAttribute="leading" secondItem="Ec7-zj-LQA" secondAttribute="leading" id="igu-M0-BwA"/>
+                            <constraint firstAttribute="trailing" secondItem="X3X-TP-Zd2" secondAttribute="trailing" id="nD2-nH-hoe"/>
+                            <constraint firstItem="6ae-t5-2vK" firstAttribute="top" secondItem="ASe-Qm-4Mi" secondAttribute="bottom" id="r1b-Fc-zjr"/>
+                            <constraint firstAttribute="trailing" secondItem="ASe-Qm-4Mi" secondAttribute="trailing" id="ra5-EK-V4A"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="내 공간" id="77M-6n-Kbm"/>
                     <navigationItem key="navigationItem" id="O0v-hQ-K3R"/>
