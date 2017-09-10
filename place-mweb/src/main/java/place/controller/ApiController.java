@@ -6,25 +6,30 @@ import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.util.List;
 
+import org.mortbay.jetty.EncodedHttpURI;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import place.dao.TestDAO;
+import place.service.ApiService;
 import place.vo.Test;
 
-@Controller
+@RestController
 public class ApiController {
 
 	@Autowired
 	TestDAO dao;
-	String clientId = "dUS0vgsxicAwYBOdrZRw";// 클라이언트 아이디값;
-	String clientSecret = "tE4a81hlX2";// 클라이언트 시크릿값;
+
+	@Autowired
+	ApiService apiService;
 	
 	@RequestMapping(value="/test")
 	public String test(){
@@ -41,67 +46,23 @@ public class ApiController {
 	/*
 	 * 블로그 검색 결과 리턴
 	 * */
-	@RequestMapping(value = "/searchBlog")
-	public ModelAndView searchBlog(@RequestParam("query") String query) {
-		String text="";
-		String result="";
-		try {
-			text = URLEncoder.encode(query, "UTF-8");
-			String apiURL = "https://openapi.naver.com/v1/search/blog?query=" + text; // json결과
-			// String apiURL = "https://openapi.naver.com/v1/search/blog.xml?query="+ text; //xml 결과 
-			result = getAPI(apiURL,query); 			
-		} catch (UnsupportedEncodingException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return new ModelAndView("review", "result", result);
+	@RequestMapping(value = "/search/blog")
+	public String searchBlog(@RequestParam("query") String query) {
+		
+		String result = apiService.searchBlog(query);
+		System.out.println(result);
+		return result;
 	}
 	
 	/*
 	 * 지역 검색 결과 리턴
 	 * */
-	@RequestMapping(value = "/searchLocal")
-	public ModelAndView searchLocal(@RequestParam("query") String query) {
-		String text="";
-		String result="";
-		try {
-			text = URLEncoder.encode(query, "UTF-8");
-			String apiURL = "https://openapi.naver.com/v1/search/local?query=" + text; // json결과
-			result = getAPI(apiURL,query); 			
-		} catch (UnsupportedEncodingException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return new ModelAndView("review", "result", result);
-	}
-	
-	public String getAPI(String apiURL,String query){
-		String result="";
-		try {
-			String text = URLEncoder.encode(query, "UTF-8");
-			URL url = new URL(apiURL);
-			HttpURLConnection con = (HttpURLConnection) url.openConnection();
-			con.setRequestMethod("GET");
-			con.setRequestProperty("X-Naver-Client-Id", clientId);
-			con.setRequestProperty("X-Naver-Client-Secret", clientSecret);
-			int responseCode = con.getResponseCode();
-			BufferedReader br;
-			if (responseCode == 200) { // 정상 호출
-				br = new BufferedReader(new InputStreamReader(con.getInputStream()));
-			} else { // 에러 발생
-				br = new BufferedReader(new InputStreamReader(con.getErrorStream()));
-			}
-			String inputLine;
-			StringBuffer response = new StringBuffer();
-			while ((inputLine = br.readLine()) != null) {
-				response.append(inputLine);
-			}
-			br.close();
-			result = response.toString();
-			System.out.println(response.toString());
-		} catch (Exception e) {
-			System.out.println(e);
-		}
+	@RequestMapping(value = "/search/local")
+	public String searchLocal(@RequestParam("query") String query) {
+		String result = apiService.searchLocal(query);
+		System.out.println(result);
 		return result;
 	}
+	
+
 }

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="recommend_info">
+  
+  <select id="selectAll" resultType="recommend_infoVO">
+  	SELECT * FROM recommend_info
+  </select>
+  <select id="selectOne" parameterType="int" resultType="recommend_infoVO">
+  	SELECT * FROM recommend_info
+  	WHERE info_no = #{info_no}
+  </select>
+    <select id="selectByUser" parameterType="int" resultType="recommend_infoVO">
+  	SELECT * FROM recommend_info
+  	WHERE user_no = #{user_no}
+  </select>
+    <select id="selectByPlace" parameterType="int" resultType="recommend_infoVO">
+  	SELECT * FROM recommend_info
+  	WHERE place_no = #{place_no}
+  </select>
+  <insert id="insertOne" parameterType="recommend_infoVO">
+  	INSERT INTO recommend_info (USER_NO,PLACE_NO,CLICK,SCORE)
+  	VALUES (#{user_no},#{place_no},#{click},#{score})
+  </insert>
+  <delete id="deleteOne" parameterType="int">
+  	DELETE FROM recommend_info
+  	WHERE INFO_NO = #{info_no}
+  </delete>
+  <update id="updateClick" parameterType="recommend_infoVO">
+  	UPDATE recommend_info
+  	SET CLICK = #{click}
+  	WHERE INFO_NO=#{info_no}
+  </update>
+  <update id="updateScore" parameterType="recommend_infoVO">
+  	UPDATE recommend_info
+  	SET SCORE = #{score}
+  	WHERE INFO_NO=#{info_no}
+  </update>
+		  
+  
+  </mapper>

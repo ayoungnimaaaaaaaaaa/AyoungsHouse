@@ -7,14 +7,23 @@
   <select id="selectAll" resultType="reviewVO">
   	SELECT * FROM REVIEW
   </select>
-  
+  <select id="selectByUser" parameterType="int" resultType="reviewVO">
+  	SELECT * FROM REVIEW
+  	WHERE USER_NO = #{user_no}
+  </select>
+  <select id="selectByPlace" parameterType="int" resultType="reviewVO">
+  	SELECT * FROM REVIEW
+  	WHERE PLACE_NO = #{place_no}
+  </select> 
   <insert id="insertOne" parameterType="reviewVO">
   	INSERT INTO REVIEW 
-  	VALUES (review_no_seq.nextval,
-  	#{user_no},
+  	(USER_NO,PLACE_NO,TITLE,REVIEW_DATE,GRADE,CONTENT,OPEN) 
+  	VALUES 
+  	(#{user_no},
   	#{place_no},
   	#{title},
   	#{review_date},
+  	#{grade},
   	#{content},
   	#{open})
   </insert>
@@ -29,7 +38,8 @@
   	SET TITEL = #{title},
   	REVIEW_DATE = #{review_date},
   	CONTENT = #{content},
-  	OPEN = #{open}
+  	OPEN = #{open},
+  	GRADE = #{grade}
   	WHERE REVIEW_NO=#{review_no}
   </update>
 		  

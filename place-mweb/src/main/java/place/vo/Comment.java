@@ -6,6 +6,8 @@ public class Comment {
 	private int place_no;
 	private int user_no;
 	private String content;
+	private int grade;
+	
 	public Comment() {
 		// TODO Auto-generated constructor stub
 	}
@@ -17,6 +19,15 @@ public class Comment {
 		this.content = content;
 	}
 	
+	
+	public Comment(int comment_no, int place_no, int user_no, String content, int grade) {
+		super();
+		this.comment_no = comment_no;
+		this.place_no = place_no;
+		this.user_no = user_no;
+		this.content = content;
+		this.grade = grade;
+	}
 	public int getComment_no() {
 		return comment_no;
 	}
@@ -40,6 +51,12 @@ public class Comment {
 	}
 	public void setContent(String content) {
 		this.content = content;
+	}
+	public int getGrade() {
+		return grade;
+	}
+	public void setGrade(int grade) {
+		this.grade = grade;
 	}
 	
 	

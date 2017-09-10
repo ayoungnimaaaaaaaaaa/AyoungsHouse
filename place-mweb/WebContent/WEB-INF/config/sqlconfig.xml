@@ -6,11 +6,24 @@
 	<typeAliases>
 		<!--  -->
 		<typeAlias type="place.vo.Test" alias="testVO" />
-		
+		<typeAlias type="place.vo.BadList" alias="badlistVO" />
+		<typeAlias type="place.vo.Comment" alias="commentVO" />
+		<typeAlias type="place.vo.Place" alias="placeVO" />
+		<typeAlias type="place.vo.Recommend_info" alias="recommend_infoVO" />
+		<typeAlias type="place.vo.Review" alias="reviewVO" />
+		<typeAlias type="place.vo.User" alias="userVO" />
+		<typeAlias type="place.vo.WishList" alias="wishlistVO" />
 	</typeAliases>
 	<mappers>
 		<!--  -->
 		<mapper resource="place/sqlmap/test.xml" />
+		<mapper resource="place/sqlmap/Badlist.xml" />
+		<mapper resource="place/sqlmap/Comment.xml" />
+		<mapper resource="place/sqlmap/Place.xml" />
+		<mapper resource="place/sqlmap/Recommend_info.xml" />
+		<mapper resource="place/sqlmap/Review.xml" />
+		<mapper resource="place/sqlmap/User.xml" />
+		<mapper resource="place/sqlmap/Wishlist.xml" />
 		
 	</mappers>
 </configuration>

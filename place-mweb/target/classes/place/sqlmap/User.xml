@@ -7,10 +7,13 @@
   <select id="selectAll" resultType="userVO">
   	SELECT * FROM USER
   </select>
+  <select id="selectOne" parameterType="String" resultType="userVO">
+  	SELECT * FROM USER WHERE ID = #{id}
+  </select>
   
   <insert id="insertOne" parameterType="userVO">
-  	INSERT INTO USER 
-  	VALUES (user_no_seq.nextval,#{id},#{pw},#{name},#{phone})
+  	INSERT INTO USER (id,pw,name,phone)
+  	VALUES (#{id},#{pw},#{name},#{phone})
   </insert>
   
   <delete id="deleteOne" parameterType="String">

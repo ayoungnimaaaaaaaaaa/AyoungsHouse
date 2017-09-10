@@ -3,9 +3,11 @@ package place.dao;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
+import org.springframework.stereotype.Repository;
 
 import place.vo.BadList;
 
+@Repository 
 public class BadlistDAO {
 	
 	SqlSession ss;
@@ -18,12 +20,12 @@ public class BadlistDAO {
 		return ss.selectList("badlist.selectAll");
 	}
 	
-	public BadList selectByUser(int user_no){
-		return ss.selectOne("badlist.selectByUser", user_no);
+	public List<BadList> selectByUser(int user_no){
+		return ss.selectList("badlist.selectByUser", user_no);
 	}
 	
-	public BadList selectByPlace(int place_no){
-		return ss.selectOne("badlist.selectByPlace", place_no);
+	public List<BadList> selectByPlace(int place_no){
+		return ss.selectList("badlist.selectByPlace", place_no);
 	}
 	
 	public void insertOne(BadList badlist){

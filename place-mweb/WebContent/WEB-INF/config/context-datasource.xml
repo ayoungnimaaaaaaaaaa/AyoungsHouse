@@ -3,11 +3,33 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+<!-- 	<bean id="testDAO" class="place.dao.TestDAO">
+		<property name="ss" ref="sqlSessionTemplate"></property>
+	</bean> -->
+	<bean id="badlistDAO" class="place.dao.BadlistDAO">
+		<property name="ss" ref="sqlSessionTemplate"></property>
+	</bean>
+	<bean id="commentDAO" class="place.dao.CommentDAO">
+		<property name="ss" ref="sqlSessionTemplate"></property>
+	</bean>
+	<bean id="placeDAO" class="place.dao.PlaceDAO">
+		<property name="ss" ref="sqlSessionTemplate"></property>
+	</bean>
+	<bean id="recommend_infoDAO" class="place.dao.Recommend_infoDAO">
+		<property name="ss" ref="sqlSessionTemplate"></property>
+	</bean>
+	<bean id="reviewDAO" class="place.dao.ReviewDAO">
+		<property name="ss" ref="sqlSessionTemplate"></property>
+	</bean>
+	<bean id="userDAO" class="place.dao.UserDAO">
+		<property name="ss" ref="sqlSessionTemplate"></property>
+	</bean>
+	<bean id="wishlistDAO" class="place.dao.WishlistDAO">
+		<property name="ss" ref="sqlSessionTemplate"></property>
+	</bean>
 	<bean id="testDAO" class="place.dao.TestDAO">
 		<property name="ss" ref="sqlSessionTemplate"></property>
 	</bean>
-	
-
 	
 	<!-- db정보 -->
 	<bean id="property"

@@ -9,10 +9,25 @@ public class Review {
 	private String review_date;
 	private String content;
 	private boolean open;
+	private int grade;
 	
 	public Review() {
 		// TODO Auto-generated constructor stub
 	}
+	
+	public Review(int review_no, int user_no, int place_no, String title, String review_date, String content,
+			boolean open, int grade) {
+		super();
+		this.review_no = review_no;
+		this.user_no = user_no;
+		this.place_no = place_no;
+		this.title = title;
+		this.review_date = review_date;
+		this.content = content;
+		this.open = open;
+		this.grade = grade;
+	}
+
 	public Review(int review_no, int user_no, int place_no, String title, String review_date, String content,
 			boolean open) {
 		super();
@@ -78,6 +93,14 @@ public class Review {
 	}
 	public void setOpen(boolean open) {
 		this.open = open;
+	}
+
+	public int getGrade() {
+		return grade;
+	}
+
+	public void setGrade(int grade) {
+		this.grade = grade;
 	}
 	
 	

@@ -9,8 +9,8 @@
   </select>
   
   <insert id="insertOne" parameterType="commentVO">
-  	INSERT INTO COMMENT 
-  	VALUES (comment_no_seq.nextval,#{place_no},#{user_no},#{content})
+  	INSERT INTO COMMENT (PLACE_NO,USER_NO,CONTENT,GRADE)
+  	VALUES (#{place_no},#{user_no},#{content},#{grade})
   </insert>
   
   <delete id="deleteOne" parameterType="int">

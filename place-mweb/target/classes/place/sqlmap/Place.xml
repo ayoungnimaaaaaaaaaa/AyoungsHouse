@@ -8,9 +8,22 @@
   	SELECT * FROM PLACE
   </select>
   
+  <select id="selectPlaceByNo" parameterType="int" resultMap="placeVO">
+  	SELECT * FROM PLACE
+  	WHERE PLACE_NO =#{place_no}
+  </select>
+  <select id="selectPlaceByAddress" parameterType="String" resultType="placeVO">
+  	SELCT * FROM PLACE
+  	WHERE ADDRESS = #{address}
+  </select>
+  <select id="selectPlaceByName" parameterType="String" resultType="placeVO">
+  	SELECT * FROM PLACE
+  	WHERE PLACE_NAME = #{place_name}
+  </select>
+  
   <insert id="insertOne" parameterType="placeVO">
-  	INSERT INTO PLACE 
-  	VALUES (place_no_seq.nextval,#{address},#{place_name})
+  	INSERT INTO PLACE (ADDRESS,PLACE_NAME)
+  	VALUES (#{address},#{place_name})
   </insert>
   
   <delete id="deleteOne" parameterType="int">

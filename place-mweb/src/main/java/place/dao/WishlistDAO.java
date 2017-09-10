@@ -3,9 +3,10 @@ package place.dao;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
+import org.springframework.stereotype.Repository;
 
 import place.vo.WishList;
-
+@Repository
 public class WishlistDAO {
 
 	SqlSession ss;
@@ -18,12 +19,12 @@ public class WishlistDAO {
 		return ss.selectList("wishlist.selectAll");
 	}
 	
-	public WishList selectByUser(int user_no){
-		return ss.selectOne("wishlist.selectByUser", user_no);
+	public List<WishList> selectByUser(int user_no){
+		return ss.selectList("wishlist.selectByUser", user_no);
 	}
 	
-	public WishList selectByPlace(int place_no){
-		return ss.selectOne("wishlist.selectByPlace", place_no);
+	public List<WishList> selectByPlace(int place_no){
+		return ss.selectList("wishlist.selectByPlace", place_no);
 	}
 	
 	public void insertOne(WishList wishlist){

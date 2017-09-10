@@ -3,8 +3,10 @@ package place.dao;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
-import place.vo.Test;
+import org.springframework.stereotype.Repository;
 
+import place.vo.Test;
+@Repository
 public class TestDAO {
 	SqlSession ss;
 	

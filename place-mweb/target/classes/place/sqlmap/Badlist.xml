@@ -19,8 +19,8 @@
   </select>
   
   <insert id="insertOne" parameterType="badlistVO">
-  	INSERT INTO BADLIST 
-  	VALUES (badlist_no_seq.nextval,#{user_no},#{place_no})
+  	INSERT INTO BADLIST (USER_NO,PLACE_NO)
+  	VALUES (#{user_no},#{place_no})
   </insert>
   
   
